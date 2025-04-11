@@ -5,6 +5,10 @@
 
 define e = Character("Eileen")
 
+default inventory = []       # Можно хранить списки
+default player_name = ""     # Или строки
+default despair_lever = 0.     #  float
+
 
 # The game starts here.
 
@@ -13,18 +17,24 @@ label start:
 
 label room:
     scene room  # Показываем фон комнаты
-    "Вы в своей комнате"
+    "Вы в своей комнате у вас отчаяние [despair_lever]"
 
     # Меню действий в комнате
     menu:
         "Осмотреть стол":
-            "На столе лежит книга и кружка."
+            "У вас повысился уровень отчаяния от вида вашего стола"
+            $ despair_lever += 10
         "Подойти к окну":
             "За окном светит солнце."
         "Подойти к компьютеру":
             jump computer  # Переход к компьютеру
     # После выбора возвращаемся в комнату
-    jump room
+
+    if (despair_lever >= 100):
+        "Вы не выдержали и застрелились."
+        return
+    else:
+        jump room
 
 label computer:
     scene computer  # Показываем фон улицы
