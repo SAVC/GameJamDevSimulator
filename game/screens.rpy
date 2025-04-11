@@ -1609,3 +1609,23 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 1200
+
+screen location_menu():
+    # Прозрачный фон для меню
+    frame:
+        xalign 0.5
+        yalign 0.9
+        background None  # Убираем фон фрейма
+
+        hbox:
+            spacing 20
+            # Кнопка для перехода в комнату
+            imagebutton:
+                idle "map_icon.png"  # Иконка комнаты
+                hover "map_icon_hover.png"  # (опционально)
+                action Jump("room")  # Переход на метку 'room'
+            # Кнопка для перехода на улицу
+            imagebutton:
+                idle "computer_icon.png"
+                hover "computer_icon_hover.png"
+                action Jump("computer")
