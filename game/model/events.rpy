@@ -5,14 +5,9 @@ init python:
     random.seed()
 
 #   Типы событий
-    class EventType(Enum):
-        BUFF = 1
-        DEBUFF = 2
-
-#   Событие по вероятности
-    def percent_chance(percent: int) -> bool:
-        """Возвращает True с вероятностью percent% (1-100)"""
-        return random.randint(1, 100) <= percent
+    class EventType(str, Enum):
+        BUFF = "buff"
+        DEBUFF = "debuff"
 
 #   Выбрать тип события по итогу
     def getEventType(buffAppears, debuffAppears) -> EventType:
@@ -69,15 +64,7 @@ init python:
             ]
 
 #   Достать событие из списка
-    def getEvent(type: 'EventType', level: 'EventLevel') -> 'Event':
-        if type == EventType.BUFF:
-            for i, item in enumerate(events.buff):
-                if getattr(item, "event_level") == level:
-                    return events.buff.pop(i)
-            return None
-        if type ==  EventType.DEBUFF:
-            for i, item in enumerate(events.debuff):
-                if getattr(item, "event_level") == level:
-                    return events.debuff.pop(i)
-            return None
+    def getEvent(type: EventType, level: 'EventLevel') -> 'Event':
+        if type is not None:
+            return getGenericEvent(level, getattr(events, type.value), True)
         return None

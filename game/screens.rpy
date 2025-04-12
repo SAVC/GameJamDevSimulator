@@ -1620,16 +1620,36 @@ screen location_menu():
 
         hbox:
             spacing 20
-            # Кнопка для перехода в комнату
+            # Кнопка для написания кода
             imagebutton:
-                idle "map_icon.png"  # Иконка комнаты
-                hover "map_icon_hover.png"  # (опционально)
-                action Jump("room")  # Переход на метку 'room'
-            # Кнопка для перехода на улицу
+                idle "code.png"  # Иконка кода
+                hover "Писать код"  # (опционально)
+                action Jump("code")  # Переход на метку 'code'
+            # Кнопка для написания кода
             imagebutton:
-                idle "computer_icon.png"
-                hover "computer_icon_hover.png"
-                action Jump("computer")
+                idle "assets.png"  # Иконка ассетов
+                hover "Создавать ассеты"  # (опционально)
+                action Jump("assets")  # Переход на метку 'assets'
+            # Кнопка для написания кода
+            imagebutton:
+                idle "coffee.png"  # Иконка кофе
+                hover "Пить кофе"  # (опционально)
+                action Jump("coffee")  # Переход на метку 'coffee'
+            # Кнопка для написания кода
+            imagebutton:
+                idle "sleep.png"  # Иконка сна
+                hover "Спать"  # (опционально)
+                action Jump("sleep")  # Переход на метку 'sleep'
+            # Кнопка для написания кода
+            imagebutton:
+                idle "music.png"  # Иконка музыки
+                hover "Писать музыку"  # (опционально)
+                action Jump("music")  # Переход на метку 'music'
+            # Кнопка для написания кода
+            imagebutton:
+                idle "scenario.png"  # Иконка сценария
+                hover "Писать сценарий"  # (опционально)
+                action Jump("scenario")  # Переход на метку 'scenario'
 
 ## CUSTOM CHOICE MENU SCREEN #################
 screen action_menu(actions):

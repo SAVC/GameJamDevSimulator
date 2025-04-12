@@ -49,3 +49,15 @@ init python:
             self.event_name = event_name
             self.event_level = event_level
             self.actions = actions
+
+#   Событие по вероятности
+    def percent_chance(percent: int) -> bool:
+        """Возвращает True с вероятностью percent% (1-100)"""
+        return random.randint(1, 100) <= percent
+
+# Достать из списка generic c флагом удаления после получения события
+    def getGenericEvent(level: EventLevel, collection: List, remove: bool):
+        for i, item in enumerate(collection):
+            if getattr(item, "event_level") == level:
+                return collection.pop(i) if remove else item
+        return None
