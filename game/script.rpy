@@ -3,40 +3,76 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+# init python:
+#     from model.state import State
+
 define e = Character("Eileen")
 
-default inventory = []       # Можно хранить списки
-default player_name = ""     # Или строки
-default despair_lever = 0.     #  float
+default state = State(0, 100, 0, 0, 50)
+default player_name = ""
+default difficulty_multiplier = 1
+default events = Events()
 
 
 # The game starts here.
 
 label start:
-    jump room  # Начинаем в комнате
+    jump room_event  # Начинаем в комнате
 
-label room:
+label room_event:
     scene room  # Показываем фон комнаты
-    "Вы в своей комнате у вас отчаяние [despair_lever]"
 
-    # Меню действий в комнате
-    menu:
-        "Осмотреть стол":
-            "У вас повысился уровень отчаяния от вида вашего стола"
-            $ despair_lever += 10
-        "Подойти к окну":
-            "За окном светит солнце."
-        "Подойти к компьютеру":
-            jump computer  # Переход к компьютеру
-    # После выбора возвращаемся в комнату
+    """Вы в своей комнате у вас отчаяние [state.despair]\n
+    Бордрость [state.energy]\n
+    Степень готовности проекта [state.readiness]\n
+    Вероятность бага [state.probability_of_bugs]\n
+    Сплоченность команды [state.team_cohesion]
+    """
 
-    if (despair_lever >= 100):
+
+    # Начинается событие
+    python:
+        buffAppears = percent_chance(state.team_cohesion)
+        debuffAppears = percent_chance(state.probability_of_bugs)
+        eventType = getEventType(buffAppears, debuffAppears)
+
+    """
+    У вас появилось событие [eventType]\n
+    Информация buffAppears = [buffAppears], debuffAppears = [debuffAppears]
+    """
+
+    python:
+        if eventType is not None:
+            level = EventLevel.getByValue(state.team_cohesion if eventType == EventType.BUFF else state.probability_of_bugs)
+            event = getEvent(eventType, level)
+
+    if eventType is not None and event is not None:
+        """
+        Уровень события [level]\n
+        Cамо событие [event.event_name]
+        """
+
+    if eventType is not None and event is not None:
+        call screen action_menu(event.actions)
+        "[result.effect]"
+        $ state.apply(result.increment)
+    else:
+        "Ничего не происходит..."
+        if eventType is None:
+            "События не произошло"
+        else:
+            "События этого типа закончились в списке"
+
+    if (state.despair >= 100):
         "Вы не выдержали и застрелились."
         return
     else:
-        jump room
+        jump room_event # TODO переходим к room_action
 
-label computer:
-    scene computer  # Показываем фон улицы
-    "Вы Подошли к компьютеру"
+label room_action:
+    scene room  # Показываем фон комнаты
+    "Настало время действовать. Покажи свою мощь!!!"
     call screen location_menu  # Снова вызываем меню
+
+label room_team:
+     scene computer  # Показываем фон компьютера

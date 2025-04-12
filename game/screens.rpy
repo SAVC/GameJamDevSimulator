@@ -1610,6 +1610,7 @@ style slider_slider:
     variant "small"
     xsize 1200
 
+## CUSTOM LOCATION MENU SCREEN #################
 screen location_menu():
     # Прозрачный фон для меню
     frame:
@@ -1629,3 +1630,10 @@ screen location_menu():
                 idle "computer_icon.png"
                 hover "computer_icon_hover.png"
                 action Jump("computer")
+
+## CUSTOM CHOICE MENU SCREEN #################
+screen action_menu(actions):
+    style_prefix "choice"
+    vbox:
+        for action in actions:
+            textbutton "[action.name]" action [SetVariable("result", action), Return()]
