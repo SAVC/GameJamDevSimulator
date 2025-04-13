@@ -1637,7 +1637,7 @@ screen location_menu():
             imagebutton:
                 idle "sleep.png"  # Иконка сна
                 action Jump("sleep")  # Переход на метку 'sleep'
-            # Кнопка для написания кода
+           # Кнопка для написания кода
             imagebutton:
                 idle "music.png"  # Иконка музыки
                 action Jump("music")  # Переход на метку 'music'
@@ -1652,3 +1652,4 @@ screen action_menu(actions):
     vbox:
         for action in actions:
             textbutton "[action.name]" action [SetVariable("result", action), Return()]
+
