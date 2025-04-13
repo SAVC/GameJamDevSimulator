@@ -3,8 +3,9 @@
 /game/.idea/
 /game/saves/
 /game/cache/
+/**/**.rpyc
 /files.txt
 **/errors.txt
 **/traceback.txt
 **/*.bak
-**/*.rryc
+/log.txt
