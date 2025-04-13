@@ -1,7 +1,9 @@
 # Default ignored files
 /.idea
+/game/.idea/
 /game/saves/
 /files.txt
 **/errors.txt
 **/traceback.txt
 **/*.bak
+**/*.rryc
