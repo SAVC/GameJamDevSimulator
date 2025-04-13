@@ -2,6 +2,7 @@
 /.idea
 /game/.idea/
 /game/saves/
+/game/cache/
 /files.txt
 **/errors.txt
 **/traceback.txt
