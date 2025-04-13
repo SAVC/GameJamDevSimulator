@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bf309d7-2a92-4147-b818-671b144d115a" name="Changes" comment="install">
+      <change afterPath="$PROJECT_DIR$/model/music.rpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/bytecode-39.rpyb" beforeDir="false" afterPath="$PROJECT_DIR$/cache/bytecode-39.rpyb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/py3analysis.rpyb" beforeDir="false" afterPath="$PROJECT_DIR$/cache/py3analysis.rpyb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/screens.rpyb" beforeDir="false" afterPath="$PROJECT_DIR$/cache/screens.rpyb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/shaders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cache/shaders.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui.rpy" beforeDir="false" afterPath="$PROJECT_DIR$/gui.rpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui.rpyc" beforeDir="false" afterPath="$PROJECT_DIR$/gui.rpyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/bar/bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/bar/bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/bar/left.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/bar/left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/bar/right.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/bar/right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/bar/top.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/bar/top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/button/check_selected_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/button/check_selected_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/button/choice_hover_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/button/choice_hover_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/button/radio_selected_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/button/radio_selected_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/button/slot_hover_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/button/slot_hover_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/button/slot_idle_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/button/slot_idle_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/frame.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/frame.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/game_menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/game_menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/main_menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/main_menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/overlay/game_menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/overlay/game_menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/overlay/main_menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/overlay/main_menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/bar/bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/bar/bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/bar/left.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/bar/left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/bar/right.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/bar/right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/bar/top.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/bar/top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/button/check_selected_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/button/check_selected_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/button/choice_hover_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/button/choice_hover_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/button/radio_selected_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/button/radio_selected_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/button/slot_hover_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/button/slot_hover_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/button/slot_idle_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/button/slot_idle_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/overlay/game_menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/overlay/game_menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/overlay/main_menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/overlay/main_menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/scrollbar/horizontal_hover_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/scrollbar/horizontal_hover_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/scrollbar/horizontal_hover_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/scrollbar/horizontal_hover_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/scrollbar/horizontal_idle_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/scrollbar/horizontal_idle_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/scrollbar/horizontal_idle_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/scrollbar/horizontal_idle_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/scrollbar/vertical_hover_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/scrollbar/vertical_hover_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/scrollbar/vertical_hover_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/scrollbar/vertical_hover_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/scrollbar/vertical_idle_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/scrollbar/vertical_idle_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/scrollbar/vertical_idle_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/scrollbar/vertical_idle_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/slider/horizontal_hover_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/slider/horizontal_hover_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/slider/horizontal_hover_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/slider/horizontal_hover_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/slider/horizontal_idle_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/slider/horizontal_idle_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/slider/horizontal_idle_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/slider/horizontal_idle_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/slider/vertical_hover_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/slider/vertical_hover_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/slider/vertical_hover_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/slider/vertical_hover_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/slider/vertical_idle_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/slider/vertical_idle_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/phone/slider/vertical_idle_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/phone/slider/vertical_idle_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/scrollbar/horizontal_hover_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/scrollbar/horizontal_hover_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/scrollbar/horizontal_hover_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/scrollbar/horizontal_hover_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/scrollbar/horizontal_idle_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/scrollbar/horizontal_idle_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/scrollbar/horizontal_idle_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/scrollbar/horizontal_idle_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/scrollbar/vertical_hover_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/scrollbar/vertical_hover_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/scrollbar/vertical_hover_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/scrollbar/vertical_hover_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/scrollbar/vertical_idle_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/scrollbar/vertical_idle_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/scrollbar/vertical_idle_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/scrollbar/vertical_idle_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/slider/horizontal_hover_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/slider/horizontal_hover_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/slider/horizontal_hover_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/slider/horizontal_hover_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/slider/horizontal_idle_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/slider/horizontal_idle_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/slider/horizontal_idle_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/slider/horizontal_idle_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/slider/vertical_hover_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/slider/vertical_hover_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/slider/vertical_hover_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/slider/vertical_hover_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/slider/vertical_idle_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/slider/vertical_idle_bar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/slider/vertical_idle_thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/slider/vertical_idle_thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/window_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/gui/window_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/actions.rpy" beforeDir="false" afterPath="$PROJECT_DIR$/model/actions.rpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/actions.rpyc" beforeDir="false" afterPath="$PROJECT_DIR$/model/actions.rpyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.rpy" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.rpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.rpyc" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.rpyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.rpy" beforeDir="false" afterPath="$PROJECT_DIR$/options.rpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.rpyc" beforeDir="false" afterPath="$PROJECT_DIR$/options.rpyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-1-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-1-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-10-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-10-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-2-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-2-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-3-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-3-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-4-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-4-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-5-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-5-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-6-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-6-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-7-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-7-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-8-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-8-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/auto-9-LT1.save" beforeDir="false" afterPath="$PROJECT_DIR$/saves/auto-9-LT1.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/persistent" beforeDir="false" afterPath="$PROJECT_DIR$/saves/persistent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens.rpy" beforeDir="false" afterPath="$PROJECT_DIR$/screens.rpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens.rpyc" beforeDir="false" afterPath="$PROJECT_DIR$/screens.rpyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.rpy" beforeDir="false" afterPath="$PROJECT_DIR$/script.rpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.rpyc" beforeDir="false" afterPath="$PROJECT_DIR$/script.rpyc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2vfGGBhgHivApjtTpfRdruUttnu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Пользователь/Desktop/RenPy/game/model",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\RenPy\game\model" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bf309d7-2a92-4147-b818-671b144d115a" name="Changes" comment="" />
+      <created>1744528618067</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744528618067</updated>
+      <workItem from="1744528619367" duration="16557000" />
+      <workItem from="1744548290041" duration="11826000" />
+    </task>
+    <task id="LOCAL-00001" summary="install">
+      <option name="closed" value="true" />
+      <created>1744547241705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744547241705</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="install" />
+    <option name="LAST_COMMIT_MESSAGE" value="install" />
+  </component>
+</project>
