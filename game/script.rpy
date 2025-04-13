@@ -244,4 +244,5 @@ label scenario:
 # Третий этап - общение с командой
 label room_team:
      scene computer  # Показываем фон компьютера
+     jump room_event
 

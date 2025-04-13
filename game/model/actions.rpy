@@ -128,5 +128,5 @@ init python:
 #   Достать событие из списка
     def getActionEvent(type: EventActionType, level: 'EventLevel') -> 'Event':
         if type is not None:
-            return getGenericEvent(level, getattr(events, type.value), False)
+            return getGenericEvent(level, getattr(actions, type.value), False)
         return None
