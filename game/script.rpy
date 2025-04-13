@@ -4,6 +4,7 @@ default difficulty_multiplier = 1
 default hours_to_deadline = 48
 default events = Events()
 default actions = ActionEvents()
+default audio_player = AudioPlayer(state)
 
 # Начало игры
 label start:
@@ -11,6 +12,7 @@ label start:
 
 # Первый этап - случайные события
 label room_event:
+    $ audio_player.play()
     scene room  # Показываем фон комнаты
 
     """Вы в своей комнате у вас отчаяние [state.despair]\n
@@ -55,12 +57,14 @@ label room_event:
 
 # Второй этап - действия
 label room_action:
+    $ audio_player.play()
     scene room  # Показываем фон комнаты
     "Настало время действовать!"
     call screen location_menu  # Снова вызываем меню
 
 # Писать код
 label code:
+    $ audio_player.play()
     scene room  # Показываем фон комнаты
     python:
         event = getActionEvent(EventActionType.CODE)
@@ -81,6 +85,7 @@ label code:
 
 # Создавать ассеты
 label assets:
+    $ audio_player.play()
     scene room  # Показываем фон комнаты
     python:
         event = getActionEvent(EventActionType.ASSETS)
@@ -101,6 +106,7 @@ label assets:
 
 # Пить кофе
 label coffee:
+    $ audio_player.play()
     scene room  # Показываем фон комнаты
     python:
         event = getActionEvent(EventActionType.COFFEE)
@@ -121,6 +127,7 @@ label coffee:
 
 # Спать
 label sleep:
+    $ audio_player.play()
     scene room  # Показываем фон комнаты
     python:
         event = getActionEvent(EventActionType.SLEEP)
@@ -141,6 +148,7 @@ label sleep:
 
 # Писать музыку
 label music:
+    $ audio_player.play()
     scene room  # Показываем фон комнаты
     python:
         event = getActionEvent(EventActionType.MUSIC)
@@ -161,6 +169,7 @@ label music:
 
 # Писать сценарий
 label scenario:
+    $ audio_player.play()
     scene room  # Показываем фон комнаты
     python:
         event = getActionEvent(EventActionType.SCENARIO)
@@ -182,6 +191,7 @@ label scenario:
 
 # Третий этап - общение с командой
 label room_team:
+    $ audio_player.play()
     scene computer  # Показываем фон компьютера
     "Очередная планерка с командой"
     $ hours_to_deadline -= 1  # Уменьшаем время до дедлайна
