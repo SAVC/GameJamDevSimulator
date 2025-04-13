@@ -37,20 +37,6 @@ init python:
         """Возвращает True с вероятностью percent% (1-100)"""
         return random.randint(1, 100) <= percent
 
-    # Функция для получения события по типу
-    def getEventType(buffAppears, debuffAppears) -> EventType:
-        event = None
-        if(buffAppears and not debuffAppears):
-            event = EventType.BUFF
-        if(debuffAppears and not buffAppears):
-            event = EventType.DEBUFF
-        if(buffAppears and debuffAppears):
-            if(state.team_cohesion >= state.probability_of_bugs):
-                event = EventType.BUFF
-            else:
-                event = EventType.DEBUFF
-        return event
-
     # Достать из списка generic c флагом удаления после получения события
     def getGenericEvent(collection: List, remove: bool):
         if collection:

@@ -9,7 +9,7 @@ init python:
         BUFF = "buff"
         DEBUFF = "debuff"
 
-#   Выбрать тип события по итогу
+# Функция для получения события по типу
     def getEventType(buffAppears, debuffAppears) -> EventType:
         event = None
         if(buffAppears and not debuffAppears):
