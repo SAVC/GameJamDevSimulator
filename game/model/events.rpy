@@ -17,7 +17,7 @@ init python:
         if(debuffAppears and not buffAppears):
             event = EventType.DEBUFF
         if(buffAppears and debuffAppears):
-            if(state,team_cohesion >= state.probability_of_bugs):
+            if(state.team_cohesion >= state.probability_of_bugs):
                 event = EventType.BUFF
             else:
                 event = EventType.DEBUFF
@@ -27,44 +27,29 @@ init python:
     class Events:
         def __init__(self):
             self.buff = [
-              Event("Test", EventLevel.EASY, [
-                    Action("Начать работать", "Вы сломали 1", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу",  "У команды нервный срыв", State(20, -10, 0, 0, -15))
+                Event("Хорошее настроение", [
+                    Action("Начать работать", "У тебя получилось воссоздать то, что было в голове и даже ничего не сломалось", State(10, 10, 5, 5, 5)),
+                    Action("Предложить писать новеллу", "Команда задумалась над твоим решением, но все равно считает, что ты тронулся", State(20, 10, 0, 0, 15))
                 ]),
-                Event("Test 2", EventLevel.NORMAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.MAJOR, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.CRITICAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
+                Event("Слишком много кофе", [
+                    Action("Попробовать поработать", "Вы написали код, который работает, но никто не понимает как.", State(10, -10, 5, 5, -5)),
+                    Action("Может быть еще раз новеллу?", "Команда решила, что вы писатель, но не программист.", State(20, -10, 0, 0, -15))
+                ])
             ]
             self.debuff = [
-                Event("Test", EventLevel.EASY, [
-                    Action("Начать работать", "Вы сломали 1", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу", "У команды нервный срыв", State(20, -10, 0, 0, -15))
+                Event("Сломался интернет", [
+                    Action("Попробовать поработать", "Вы написали код, который работает, но никто не понимает как.", State(10, -10, 5, 5, -5)),
+                    Action("Предложить написать новеллу", "Команда решила, что вы писатель, но не программист.", State(20, -10, 0, 0, -15))
                 ]),
-                Event("Test 2", EventLevel.NORMAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.MAJOR, [
-                    Action("Начать работать 2", "Вы сломали 2",  State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.CRITICAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
+                Event("Команда ушла на обед", [
+                    Action("Попробовать поработать", "Вы написали код, который работает, но никто не понимает как.", State(10, -10, 5, 5, -5)),
+                    Action("Предложить написать новеллу", "Команда решила, что вы писатель, но не программист.", State(20, -10, 0, 0, -15))
+                ])
             ]
 
+
 #   Достать событие из списка
-    def getEvent(type: EventType, level: 'EventLevel') -> 'Event':
+    def getEvent(type: EventType) -> 'Event':
         if type is not None:
-            return getGenericEvent(level, getattr(events, type.value), True)
+            return getGenericEvent(getattr(events, type.value), True)
         return None

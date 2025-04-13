@@ -1,72 +1,40 @@
+# team.rpy
 init python:
     from typing import List  # Импортируем List
 
-#   Типы событий
-    class EventTeamType(str, Enum):
-        BRAINSTORM = "brainstorm"
-        TEAM_COHESION = "team_cohesion"
-        COMMUNICATION = "communication"
+    # Персонаж
+    class Character:
+        def __init__(self, name, events: List[Event]):
+            self.name = name
+            self.events = events
 
-# Базовый класс событий
-    class TeamEvents:
-        def __init__(self):
-            self.brainstorm = [
-              Event("Test", EventLevel.EASY, [
-                    Action("Начать работать", "Вы сломали 1", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу",  "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.NORMAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.MAJOR, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.CRITICAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-            ]
-            self.team_cohesion = [
-                Event("Test", EventLevel.EASY, [
-                    Action("Начать работать", "Вы сломали 1", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.NORMAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.MAJOR, [
-                    Action("Начать работать 2", "Вы сломали 2",  State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.CRITICAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-            ]
-            self.communication = [
-                Event("Test", EventLevel.EASY, [
-                    Action("Начать работать", "Вы сломали 1", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.NORMAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.MAJOR, [
-                    Action("Начать работать 2", "Вы сломали 2",  State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-                Event("Test 2", EventLevel.CRITICAL, [
-                    Action("Начать работать 2", "Вы сломали 2", State(10, -10, 5, 5, -5)),
-                    Action("Предложить писать новеллу 2", "У команды нервный срыв", State(20, -10, 0, 0, -15))
-                ]),
-            ]
+    # Создание персонажей и их событий
+    characters = [
+        Character("Alice", [
+            Event("Alice needs help with a bug", [
+                Action("Offer to help", "Alice is grateful for your help. Team cohesion increases.", State(0, -5, 0, 0, 10)),
+                Action("Say you're busy", "Alice understands but is a bit disappointed. Team cohesion decreases.", State(0, 0, 0, 0, -5))
+            ]),
+            Event("Alice wants to discuss the project", [
+                Action("Engage in discussion", "You have a productive discussion. Readiness increases.", State(0, -5, 10, 0, 0)),
+                Action("Avoid the discussion", "Alice feels ignored. Team cohesion decreases.", State(0, 0, 0, 0, -5))
+            ])
+        ]),
+        Character("Bob", [
+            Event("Bob has a new idea", [
+                Action("Listen to his idea", "Bob is excited to share. Team cohesion increases.", State(0, -5, 0, 0, 10)),
+                Action("Dismiss his idea", "Bob feels rejected. Team cohesion decreases.", State(0, 0, 0, 0, -5))
+            ]),
+            Event("Bob needs a break", [
+                Action("Suggest a short break", "Bob appreciates the suggestion. Energy increases.", State(0, 10, 0, 0, 0)),
+                Action("Tell him to keep working", "Bob feels stressed. Despair increases.", State(10, 0, 0, 0, 0))
+            ])
+        ]),
+        # Добавьте еще персонажей и их событий по аналогии
+    ]
 
-#   Достать событие из списка
-    def getEvent(type: EventType, level: 'EventLevel') -> 'Event':
-        if type is not None:
-            return getGenericEvent(level, getattr(events, type.value), True)
-        return None
+    # Функция для получения случайного персонажа и события
+    def get_random_character_event() -> (Character, Event):
+        character = random.choice(characters)
+        event = random.choice(character.events)
+        return character, event

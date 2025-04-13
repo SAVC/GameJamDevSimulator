@@ -1,8 +1,9 @@
 init python:
-    from typing import List  # Импортируем List
+    from typing import List
     from enum import Enum
+    import random
 
-# Базовый класс характеристик
+    # Базовый класс характеристик
     class State:
         def __init__(self, despair, energy, readiness, probability_of_bugs, team_cohesion):
             self.despair = despair
@@ -18,46 +19,40 @@ init python:
             self.probability_of_bugs += increment.probability_of_bugs
             self.team_cohesion += increment.team_cohesion
 
-#   Объект ответа на любое действие
+    # Объект ответа на любое действие
     class Action:
         def __init__(self, name, effect, increment: State):
             self.name = name
             self.effect = effect
             self.increment = increment
 
-#   Уровень события
-    class EventLevel(Enum):
-        EASY = 25
-        NORMAL = 50
-        MAJOR = 75
-        CRITICAL = 100
-
-        @staticmethod
-        def getByValue(value) -> 'EventLevel':
-            if value <= 25:
-                return EventLevel.EASY
-            if value <= 50:
-                return EventLevel.NORMAL
-            if value <= 75:
-                return EventLevel.MAJOR
-            if value >= 75:
-                return EventLevel.CRITICAL
-
-#   Событие
+    # Событие
     class Event:
-        def __init__(self, event_name, event_level: EventLevel, actions: List[Action]):
+        def __init__(self, event_name, actions: List[Action]):
             self.event_name = event_name
-            self.event_level = event_level
             self.actions = actions
 
-#   Событие по вероятности
+    # Функция для вычисления вероятности
     def percent_chance(percent: int) -> bool:
         """Возвращает True с вероятностью percent% (1-100)"""
         return random.randint(1, 100) <= percent
 
-# Достать из списка generic c флагом удаления после получения события
-    def getGenericEvent(level: EventLevel, collection: List, remove: bool):
-        for i, item in enumerate(collection):
-            if getattr(item, "event_level") == level:
-                return collection.pop(i) if remove else item
+    # Функция для получения события по типу
+    def getEventType(buffAppears, debuffAppears) -> EventType:
+        event = None
+        if(buffAppears and not debuffAppears):
+            event = EventType.BUFF
+        if(debuffAppears and not buffAppears):
+            event = EventType.DEBUFF
+        if(buffAppears and debuffAppears):
+            if(state.team_cohesion >= state.probability_of_bugs):
+                event = EventType.BUFF
+            else:
+                event = EventType.DEBUFF
+        return event
+
+    # Достать из списка generic c флагом удаления после получения события
+    def getGenericEvent(collection: List, remove: bool):
+        if collection:
+            return collection.pop(0) if remove else collection[0]
         return None

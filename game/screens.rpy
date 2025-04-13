@@ -1610,6 +1610,7 @@ style slider_slider:
     variant "small"
     xsize 1200
 
+# screens.rpy
 ## CUSTOM LOCATION MENU SCREEN #################
 screen location_menu():
     # Прозрачный фон для меню
@@ -1623,32 +1624,26 @@ screen location_menu():
             # Кнопка для написания кода
             imagebutton:
                 idle "code.png"  # Иконка кода
-                hover "Писать код"  # (опционально)
                 action Jump("code")  # Переход на метку 'code'
             # Кнопка для написания кода
             imagebutton:
                 idle "assets.png"  # Иконка ассетов
-                hover "Создавать ассеты"  # (опционально)
                 action Jump("assets")  # Переход на метку 'assets'
             # Кнопка для написания кода
             imagebutton:
                 idle "coffee.png"  # Иконка кофе
-                hover "Пить кофе"  # (опционально)
                 action Jump("coffee")  # Переход на метку 'coffee'
             # Кнопка для написания кода
             imagebutton:
                 idle "sleep.png"  # Иконка сна
-                hover "Спать"  # (опционально)
                 action Jump("sleep")  # Переход на метку 'sleep'
             # Кнопка для написания кода
             imagebutton:
                 idle "music.png"  # Иконка музыки
-                hover "Писать музыку"  # (опционально)
                 action Jump("music")  # Переход на метку 'music'
             # Кнопка для написания кода
             imagebutton:
                 idle "scenario.png"  # Иконка сценария
-                hover "Писать сценарий"  # (опционально)
                 action Jump("scenario")  # Переход на метку 'scenario'
 
 ## CUSTOM CHOICE MENU SCREEN #################
